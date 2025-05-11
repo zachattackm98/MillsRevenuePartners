@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +42,7 @@ const Header: React.FC = () => {
           aria-label="Mills Revenue Partners"
         >
           <img 
-            src={logo} 
+            src="/ChatGPT Image May 11, 2025 at 02_01_04 AM.png" 
             alt="Mills Revenue Partners" 
             className="h-12 w-auto"
           />
