@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0F172A;
+  --slate: #64748B;
+  --gold: #EAAC8B;
+  --light-gold: #F8DFD4;
+  --dark-gold: #D9966F;
+  --white: #FFFFFF;
+  --off-white: #F8FAFC;
+  --light-gray: #E2E8F0;
+}
+
+@layer base {
+  html {
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    @apply bg-white text-navy;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply text-white bg-gold hover:bg-dark-gold focus:ring-gold;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-xl {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl;
+  }
+
+  .heading-lg {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl;
+  }
+
+  .heading-md {
+    @apply text-xl font-semibold tracking-tight sm:text-2xl;
+  }
+
+  .subheading {
+    @apply mt-4 text-lg text-slate sm:text-xl;
+  }
+}
