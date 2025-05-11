@@ -34,33 +34,87 @@ const HomePage: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-off-white to-white">
-        <div className="container">
+      <section className="relative min-h-[90vh] flex items-center py-20 md:py-32 bg-gradient-to-b from-off-white to-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-white/50" />
+        </div>
+        <div className="container relative z-10">
           <motion.div
-            className="max-w-3xl mx-auto text-center space-y-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             variants={staggerContainer}
             initial="hidden"
             animate="show"
           >
-            <motion.h1 
-              className="heading-xl text-navy" 
+            <motion.div className="space-y-8" variants={fadeInUp}>
+              <motion.img 
+                src="/ChatGPT Image May 11, 2025 at 02_01_04 AM.png"
+                alt="Mills Revenue Partners"
+                className="w-64 md:w-96 mx-auto lg:mx-0"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              />
+              <h1 className="heading-xl text-navy text-center lg:text-left">
+                High-Ticket Closing for Founders Who Want Results, Not Maybes.
+              </h1>
+              <p className="text-xl md:text-2xl text-slate text-center lg:text-left">
+                Elite-level remote closing. Commission-only. Revenue guaranteed or you don't pay.
+              </p>
+              <motion.div className="flex justify-center lg:justify-start space-x-4">
+                <Link 
+                  to="/contact" 
+                  className="btn btn-primary text-lg px-8 py-4"
+                >
+                  Schedule a Call
+                </Link>
+                <Link
+                  to="/about"
+                  className="btn bg-white border-2 border-navy text-navy hover:bg-navy hover:text-white transition-colors duration-300"
+                >
+                  Learn More
+                </Link>
+              </motion.div>
+            </motion.div>
+            
+            <motion.div 
+              className="hidden lg:block"
               variants={fadeInUp}
             >
-              High-Ticket Closing for Founders Who Want Results, Not Maybes.
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-slate" 
-              variants={fadeInUp}
-            >
-              Elite-level remote closing. Commission-only. Revenue guaranteed or you don't pay.
-            </motion.p>
-            <motion.div variants={fadeInUp}>
-              <Link 
-                to="/contact" 
-                className="btn btn-primary text-lg px-8 py-4"
-              >
-                Schedule a Call
-              </Link>
+              <div className="relative">
+                <div className="absolute -top-6 -left-6 w-64 h-64 bg-gold/10 rounded-full" />
+                <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-navy/5 rounded-full" />
+                <div className="bg-white p-8 rounded-xl shadow-xl relative">
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
+                        <CheckCircle2 className="w-6 h-6 text-gold" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-1">Commission-Only Model</h3>
+                        <p className="text-slate">Pay only when we deliver results. No retainers.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
+                        <CheckCircle2 className="w-6 h-6 text-gold" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-1">Enterprise Experience</h3>
+                        <p className="text-slate">8+ years closing complex B2B deals</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
+                        <CheckCircle2 className="w-6 h-6 text-gold" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-1">Proven Track Record</h3>
+                        <p className="text-slate">Consistent high-ticket closings</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -85,12 +139,13 @@ const HomePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
-              className="bg-off-white p-8 rounded-lg shadow-sm"
+              className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
+              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="heading-md mb-4">Strategic Sales Expertise</h3>
               <p className="text-slate">
                 Enterprise-level sales strategies tailored to your high-ticket offering, focused on value and ROI.
@@ -98,12 +153,13 @@ const HomePage: React.FC = () => {
             </motion.div>
 
             <motion.div 
-              className="bg-off-white p-8 rounded-lg shadow-sm"
+              className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
+              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="heading-md mb-4">Commission-Only Model</h3>
               <p className="text-slate">
                 Pay only for results. No retainers or base fees means we're aligned with your success.
@@ -111,12 +167,13 @@ const HomePage: React.FC = () => {
             </motion.div>
 
             <motion.div 
-              className="bg-off-white p-8 rounded-lg shadow-sm"
+              className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
+              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="heading-md mb-4">Lead-to-Revenue Pipeline</h3>
               <p className="text-slate">
                 We handle the entire sales process from qualifying leads to negotiating deals and closing contracts.
