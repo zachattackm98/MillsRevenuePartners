@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Calendar } from 'lucide-react';
-import logo from '../assets/logo.png';
+import logo from 'assets/'ChatGPT Image May 11, 2025 at 02_01_04 AM.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
