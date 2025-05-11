@@ -32,7 +32,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-20'
+        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'
       }`}
     >
       <div className="container flex items-center justify-between">
