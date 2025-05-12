@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           aria-label="Mills Revenue Partners"
         >
           <img 
-            src="/mrp-m.png" 
+            src="/MRP M.png" 
             alt="Mills Revenue Partners" 
             className="h-12 w-auto"
           />
