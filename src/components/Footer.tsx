@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Calendar } from 'lucide-react';
-import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <Link to="/" className="block">
               <img 
-                src={logo} 
+                src="/MRP M.png" 
                 alt="Mills Revenue Partners" 
                 className="h-12 w-auto brightness-0 invert"
               />
