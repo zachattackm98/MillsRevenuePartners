@@ -34,11 +34,8 @@ const HomePage: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center py-12 md:py-32 bg-gradient-to-b from-off-white to-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-white/50" />
-        </div>
-        <div className="container px-4 md:px-6">
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center py-12 md:py-32 bg-gradient-to-b from-off-white to-white">
+        <div className="container px-4 md:px-6 relative z-10">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
             variants={staggerContainer}
