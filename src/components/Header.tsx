@@ -32,7 +32,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-3'
       }`}
     >
       <div className="container flex items-center justify-between">
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           <img 
             src="/MRP M.png" 
             alt="Mills Revenue Partners" 
-            className="h-12 w-auto"
+            className="h-10 w-auto"
           />
         </Link>
 
