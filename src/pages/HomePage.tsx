@@ -268,6 +268,92 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-12 md:py-24 bg-white">
+        <div className="container px-4 md:px-6">
+          <motion.div 
+            className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">How It Works</h2>
+            <p className="text-lg md:text-xl text-slate">
+              Our streamlined process gets us from introduction to revenue quickly and efficiently.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <motion.div 
+              className="bg-off-white p-6 md:p-8 rounded-lg shadow-sm relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold text-lg md:text-xl">
+                1
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 pt-2">Intro Call</h3>
+              <p className="text-slate text-base md:text-lg">
+                We assess if your offer and leads are a good fit for our closing process and establish expectations.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-off-white p-6 md:p-8 rounded-lg shadow-sm relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold text-lg md:text-xl">
+                2
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 pt-2">CRM Access</h3>
+              <p className="text-slate text-base md:text-lg">
+                We integrate with your existing systems, set up tracking, and begin working your qualified leads.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-off-white p-6 md:p-8 rounded-lg shadow-sm relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold text-lg md:text-xl">
+                3
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 pt-2">Closed Revenue</h3>
+              <p className="text-slate text-base md:text-lg">
+                We execute our proven closing process and you receive regular updates as deals progress and close.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <a 
+              href="https://calendly.com/zachm98/30min"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="group inline-flex items-center space-x-2 text-lg font-medium text-navy hover:text-gold transition-colors"
+            >
+              <span>Ready to start closing more deals?</span>
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-navy text-white">
         <div className="container px-4 md:px-6">
