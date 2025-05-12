@@ -1,76 +1,58 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 
-// Detect if we're on mobile for conditional animations
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-  
-  return isMobile;
-};
-
-// Main stagger container with optimized timing
 const staggerContainer = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.1
+      staggerChildren: 0.1,
+      delayChildren: 0.2
     }
   }
 };
 
-// Optimized fade in animation
 const fadeInUp = {
-  hidden: { opacity: 0, y: 10 },  // Reduced distance
+  hidden: { opacity: 0, y: 20 },
   show: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.4,
       ease: [0.22, 1, 0.36, 1]
     }
   }
 };
 
-// Optimized container variant
+// Container variant for smooth staggered animations
 const containerVariant = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.05
+      staggerChildren: 0.15,
+      delayChildren: 0.1
     }
   }
 };
 
-// Optimized card variant
+// Card variant for smooth individual card animations
 const cardVariant = {
-  hidden: { opacity: 0, y: 8 },
+  hidden: { opacity: 0, y: 10 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       type: "tween",
       ease: "easeOut",
-      duration: 0.25
+      duration: 0.3
     }
   }
 };
 
-const HomePage = () => {
-  const isMobile = useIsMobile();
-  
+const HomePage: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -94,7 +76,7 @@ const HomePage = () => {
                 className="w-48 md:w-64 lg:w-96 mx-auto lg:mx-0"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
               />
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-navy text-center lg:text-left leading-tight">
                 High-Ticket Closing for Founders Who Want Results, Not Maybes.
@@ -123,7 +105,6 @@ const HomePage = () => {
             <motion.div 
               className="hidden lg:block"
               variants={fadeInUp}
-              style={{ willChange: "transform, opacity" }}
             >
               <div className="relative">
                 <div className="absolute -top-6 -left-6 w-48 md:w-64 h-48 md:h-64 bg-gold/10 rounded-full" />
@@ -165,15 +146,15 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* What We Do Section - OPTIMIZED */}
+      {/* What We Do Section */}
       <section className="py-8 sm:py-12 md:py-24 bg-white">
         <div className="container">
           <motion.div 
             className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.4 }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">What We Do</h2>
             <p className="text-base md:text-lg lg:text-xl text-slate px-4 sm:px-0">
@@ -186,13 +167,12 @@ const HomePage = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-0"
             variants={containerVariant}
             initial="hidden"
-            animate="show"
-            style={{ willChange: "opacity" }}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <motion.div 
               className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
-              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Strategic Sales Expertise</h3>
@@ -204,7 +184,6 @@ const HomePage = () => {
             <motion.div 
               className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
-              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Commission-Only Model</h3>
@@ -216,7 +195,6 @@ const HomePage = () => {
             <motion.div 
               className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
-              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Lead-to-Revenue Pipeline</h3>
@@ -233,10 +211,10 @@ const HomePage = () => {
         <div className="container px-4 md:px-6">
           <motion.div 
             className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Is This You?</h2>
             <p className="text-lg md:text-xl text-slate">
@@ -247,10 +225,10 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <motion.div 
               className="space-y-6"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              style={{ willChange: "transform, opacity" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
               <h3 className="text-xl md:text-2xl font-bold mb-4">This is for you if:</h3>
               <ul className="space-y-4">
@@ -271,10 +249,10 @@ const HomePage = () => {
 
             <motion.div 
               className="space-y-6"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              style={{ willChange: "transform, opacity" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h3 className="text-xl md:text-2xl font-bold mb-4">This isn't for you if:</h3>
               <ul className="space-y-4">
@@ -296,10 +274,10 @@ const HomePage = () => {
 
           <motion.div 
             className="mt-12 text-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <a 
               href="https://calendly.com/zachm98/30min"
@@ -318,10 +296,10 @@ const HomePage = () => {
         <div className="container px-4 md:px-6">
           <motion.div 
             className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">How It Works</h2>
             <p className="text-lg md:text-xl text-slate">
@@ -332,10 +310,10 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <motion.div 
               className="bg-off-white p-6 md:p-8 rounded-lg shadow-sm relative"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.05 }}
-              style={{ willChange: "transform, opacity" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold text-lg md:text-xl">
                 1
@@ -348,10 +326,10 @@ const HomePage = () => {
 
             <motion.div 
               className="bg-off-white p-6 md:p-8 rounded-lg shadow-sm relative"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              style={{ willChange: "transform, opacity" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold text-lg md:text-xl">
                 2
@@ -364,10 +342,10 @@ const HomePage = () => {
 
             <motion.div 
               className="bg-off-white p-6 md:p-8 rounded-lg shadow-sm relative"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.15 }}
-              style={{ willChange: "transform, opacity" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold text-lg md:text-xl">
                 3
@@ -381,10 +359,10 @@ const HomePage = () => {
 
           <motion.div 
             className="mt-12 text-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             <a 
               href="https://calendly.com/zachm98/30min"
@@ -404,10 +382,10 @@ const HomePage = () => {
         <div className="container px-4 md:px-6">
           <motion.div 
             className="max-w-3xl mx-auto text-center space-y-4 md:space-y-6"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Start Closing More High-Ticket Deals</h2>
             <p className="text-lg md:text-xl text-slate-300">
