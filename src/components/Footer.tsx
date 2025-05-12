@@ -36,8 +36,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-gold" />
-                <a href="mailto:zach@millsrevenue.com" className="text-slate-300 hover:text-gold transition-colors">
-                  zach@millsrevenue.com
+                <a href="mailto:contact@millsrevenue.com" className="text-slate-300 hover:text-gold transition-colors">
+                  contact@millsrevenue.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
