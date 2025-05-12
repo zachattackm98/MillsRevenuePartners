@@ -183,6 +183,91 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Is This You Section */}
+      <section className="py-12 md:py-24 bg-off-white">
+        <div className="container px-4 md:px-6">
+          <motion.div 
+            className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Is This You?</h2>
+            <p className="text-lg md:text-xl text-slate">
+              Our services aren't for everyone. Here's how to know if we're the right fit.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+            <motion.div 
+              className="space-y-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-xl md:text-2xl font-bold mb-4">This is for you if:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-navy text-base md:text-lg">You're generating qualified inbound leads</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-navy text-base md:text-lg">You sell a $5K+ offer</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-navy text-base md:text-lg">You want a closer who performs, not guesses</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div 
+              className="space-y-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h3 className="text-xl md:text-2xl font-bold mb-4">This isn't for you if:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-navy text-base md:text-lg">You don't have product-market fit</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-navy text-base md:text-lg">You expect a magic fix for a broken offer</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-navy text-base md:text-lg">You want a junior SDR, not a strategic closer</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <a 
+              href="https://calendly.com/zachm98/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              See if We're a Good Fit
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-navy text-white">
         <div className="container px-4 md:px-6">
