@@ -109,8 +109,8 @@ const ContactPage: React.FC = () => {
                     <Mail className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Email</h3>
-                      <a href="mailto:zach@millsrevenue.com" className="text-slate hover:text-gold transition-colors">
-                        zach@millsrevenue.com
+                      <a href="mailto:contact@millsrevenue.com" className="text-slate hover:text-gold transition-colors">
+                        contact@millsrevenue.com
                       </a>
                     </div>
                   </div>
@@ -119,8 +119,8 @@ const ContactPage: React.FC = () => {
                     <Phone className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Phone/Text</h3>
-                      <a href="tel:+15555555555" className="text-slate hover:text-gold transition-colors">
-                        (555) 555-5555
+                      <a href="tel:+17209004934" className="text-slate hover:text-gold transition-colors">
+                        (720) 900-4934
                       </a>
                     </div>
                   </div>
