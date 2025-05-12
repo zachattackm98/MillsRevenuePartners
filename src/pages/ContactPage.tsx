@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Calendar, CheckCircle2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 type FormData = {
   name: string;
@@ -33,13 +34,19 @@ const ContactPage: React.FC = () => {
     setError('');
 
     try {
-      // This is just a simulation of form submission
-      // In a real implementation, you would send data to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const { error: submitError } = await supabase
+        .from('contact_submissions')
+        .insert([formData]);
+
+      if (submitError) {
+        throw new Error(submitError.message);
+      }
+
       setIsSubmitted(true);
       setFormData(initialFormData);
     } catch (err) {
       setError('There was a problem submitting your form. Please try again.');
+      console.error('Form submission error:', err);
     } finally {
       setIsSubmitting(false);
     }
