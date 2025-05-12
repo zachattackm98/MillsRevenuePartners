@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <Link to="/" className="block">
               <img 
-                src="/logo.png" 
+                src="/MRP M.png" 
                 alt="Mills Revenue Partners" 
                 className="h-12 w-auto brightness-0 invert"
               />
