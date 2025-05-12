@@ -8,7 +8,8 @@ const staggerContainer = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.1,
+      delayChildren: 0.2
     }
   }
 };
@@ -19,7 +20,7 @@ const fadeInUp = {
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
       ease: [0.22, 1, 0.36, 1]
     }
   }
@@ -31,7 +32,7 @@ const HomePage: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
     >
       {/* Hero Section */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center py-12 md:py-32 bg-gradient-to-b from-off-white to-white">
@@ -120,61 +121,61 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-12 md:py-24 bg-white">
-        <div className="container px-4 md:px-6">
+      <section className="py-8 sm:py-12 md:py-24 bg-white">
+        <div className="container">
           <motion.div 
             className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4 }}
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">What We Do</h2>
-            <p className="text-lg md:text-xl text-slate">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">What We Do</h2>
+            <p className="text-base md:text-lg lg:text-xl text-slate px-4 sm:px-0">
               We help B2B founders, SaaS companies, and consultants close high-ticket deals ($5K–$50K+) 
               without the overhead of hiring an in-house sales team.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-0">
             <motion.div 
-              className="group bg-off-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="h-10 w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 md:mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Strategic Sales Expertise</h3>
-              <p className="text-slate text-base md:text-lg">
+              <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Strategic Sales Expertise</h3>
+              <p className="text-slate text-sm sm:text-base md:text-lg">
                 Enterprise-level sales strategies tailored to your high-ticket offering, focused on value and ROI.
               </p>
             </motion.div>
 
             <motion.div 
-              className="group bg-off-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <div className="h-10 w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 md:mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Commission-Only Model</h3>
-              <p className="text-slate text-base md:text-lg">
+              <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Commission-Only Model</h3>
+              <p className="text-slate text-sm sm:text-base md:text-lg">
                 Pay only for results. No retainers or base fees means we're aligned with your success.
               </p>
             </motion.div>
 
             <motion.div 
-              className="group bg-off-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <div className="h-10 w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 md:mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Lead-to-Revenue Pipeline</h3>
-              <p className="text-slate text-base md:text-lg">
+              <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Lead-to-Revenue Pipeline</h3>
+              <p className="text-slate text-sm sm:text-base md:text-lg">
                 We handle the entire sales process from qualifying leads to negotiating deals and closing contracts.
               </p>
             </motion.div>
