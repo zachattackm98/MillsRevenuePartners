@@ -48,7 +48,12 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5 text-gold" />
-                <a href="#" className="text-slate-300 hover:text-gold transition-colors">
+                <a 
+                  href="https://calendly.com/zachm98/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-slate-300 hover:text-gold transition-colors"
+                >
                   Schedule a Call
                 </a>
               </li>

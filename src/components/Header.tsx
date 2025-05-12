@@ -68,9 +68,14 @@ const Header: React.FC = () => {
           >
             Contact
           </Link>
-          <Link to="/contact" className="btn btn-primary">
+          <a 
+            href="https://calendly.com/zachm98/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             Schedule a Call
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Nav Toggle */}
@@ -116,9 +121,14 @@ const Header: React.FC = () => {
             >
               Contact
             </Link>
-            <Link to="/contact" className="block w-full text-center btn btn-primary">
+            <a 
+              href="https://calendly.com/zachm98/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center btn btn-primary"
+            >
               Schedule a Call
-            </Link>
+            </a>
           </div>
         </motion.div>
       )}
