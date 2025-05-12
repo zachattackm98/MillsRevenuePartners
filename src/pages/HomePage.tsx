@@ -26,6 +26,32 @@ const fadeInUp = {
   }
 };
 
+// Container variant for smooth staggered animations
+const containerVariant = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1
+    }
+  }
+};
+
+// Card variant for smooth individual card animations
+const cardVariant = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      ease: "easeOut",
+      duration: 0.3
+    }
+  }
+};
+
 const HomePage: React.FC = () => {
   return (
     <motion.div
@@ -127,7 +153,7 @@ const HomePage: React.FC = () => {
             className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4 }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">What We Do</h2>
@@ -137,13 +163,16 @@ const HomePage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-0">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-0"
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <motion.div 
               className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.3 }}
+              variants={cardVariant}
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Strategic Sales Expertise</h3>
@@ -154,10 +183,7 @@ const HomePage: React.FC = () => {
 
             <motion.div 
               className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.3, delay: 0.1 }}
+              variants={cardVariant}
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Commission-Only Model</h3>
@@ -168,10 +194,7 @@ const HomePage: React.FC = () => {
 
             <motion.div 
               className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.3, delay: 0.2 }}
+              variants={cardVariant}
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Lead-to-Revenue Pipeline</h3>
@@ -179,7 +202,7 @@ const HomePage: React.FC = () => {
                 We handle the entire sales process from qualifying leads to negotiating deals and closing contracts.
               </p>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
