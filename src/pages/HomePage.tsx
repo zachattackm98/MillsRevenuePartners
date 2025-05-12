@@ -33,8 +33,9 @@ const containerVariant = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1
+      duration: 0.5,
+      when: "beforeChildren",
+      staggerChildren: 0.1
     }
   }
 };
@@ -46,9 +47,8 @@ const cardVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "tween",
-      ease: "easeOut",
-      duration: 0.5
+      duration: 0.5,
+      ease: "easeOut"
     }
   }
 };
@@ -195,7 +195,7 @@ const HomePage: React.FC = () => {
             variants={containerVariant}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true }}
           >
             <motion.div 
               className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
