@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 
+// Animation variants
 const staggerContainer = {
   hidden: { opacity: 0 },
   show: {
@@ -40,14 +41,40 @@ const containerVariant = {
 
 // Card variant for smooth individual card animations
 const cardVariant = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       type: "tween",
       ease: "easeOut",
-      duration: 0.3
+      duration: 0.5
+    }
+  }
+};
+
+// List container variant
+const listContainerVariant = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+// List item variant
+const listItemVariant = {
+  hidden: { opacity: 0, x: -20 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "tween",
+      ease: "easeOut",
+      duration: 0.5
     }
   }
 };
@@ -147,58 +174,58 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-8 sm:py-12 md:py-24 bg-white">
+      <section className="section bg-white">
         <div className="container">
           <motion.div 
-            className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
+            className="max-w-3xl mx-auto text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">What We Do</h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate px-4 sm:px-0">
+            <h2 className="heading-lg">What We Do</h2>
+            <p className="subheading">
               We help B2B founders, SaaS companies, and consultants close high-ticket deals ($5K–$50K+) 
               without the overhead of hiring an in-house sales team.
             </p>
           </motion.div>
 
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-0"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={containerVariant}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
           >
             <motion.div 
-              className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
             >
-              <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Strategic Sales Expertise</h3>
-              <p className="text-slate text-sm sm:text-base md:text-lg">
+              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
+              <h3 className="heading-md mb-4">Strategic Sales Expertise</h3>
+              <p className="text-slate">
                 Enterprise-level sales strategies tailored to your high-ticket offering, focused on value and ROI.
               </p>
             </motion.div>
 
             <motion.div 
-              className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
             >
-              <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Commission-Only Model</h3>
-              <p className="text-slate text-sm sm:text-base md:text-lg">
+              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
+              <h3 className="heading-md mb-4">Commission-Only Model</h3>
+              <p className="text-slate">
                 Pay only for results. No retainers or base fees means we're aligned with your success.
               </p>
             </motion.div>
 
             <motion.div 
-              className="group bg-off-white p-5 sm:p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
             >
-              <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-gold/20 rounded-lg mb-4 group-hover:bg-gold/30 transition-colors duration-300" />
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Lead-to-Revenue Pipeline</h3>
-              <p className="text-slate text-sm sm:text-base md:text-lg">
+              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
+              <h3 className="heading-md mb-4">Lead-to-Revenue Pipeline</h3>
+              <p className="text-slate">
                 We handle the entire sales process from qualifying leads to negotiating deals and closing contracts.
               </p>
             </motion.div>
@@ -207,68 +234,86 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Is This You Section */}
-      <section className="py-12 md:py-24 bg-off-white">
-        <div className="container px-4 md:px-6">
+      <section className="section bg-white">
+        <div className="container">
           <motion.div 
-            className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
+            className="max-w-3xl mx-auto text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Is This You?</h2>
-            <p className="text-lg md:text-xl text-slate">
+            <h2 className="heading-lg">Is This You?</h2>
+            <p className="subheading">
               Our services aren't for everyone. Here's how to know if we're the right fit.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div 
               className="space-y-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={listContainerVariant}
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
-              <h3 className="text-xl md:text-2xl font-bold mb-4">This is for you if:</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
+              <h3 className="heading-md mb-4">This is for you if:</h3>
+              <motion.ul className="space-y-4" variants={listContainerVariant}>
+                <motion.li 
+                  className="flex items-start space-x-3"
+                  variants={listItemVariant}
+                >
                   <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy text-base md:text-lg">You're generating qualified inbound leads</span>
-                </li>
-                <li className="flex items-start space-x-3">
+                  <span className="text-navy">You're generating qualified inbound leads</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-start space-x-3"
+                  variants={listItemVariant}
+                >
                   <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy text-base md:text-lg">You sell a $5K+ offer</span>
-                </li>
-                <li className="flex items-start space-x-3">
+                  <span className="text-navy">You sell a $5K+ offer</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-start space-x-3"
+                  variants={listItemVariant}
+                >
                   <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy text-base md:text-lg">You want a closer who performs, not guesses</span>
-                </li>
-              </ul>
+                  <span className="text-navy">You want a closer who performs, not guesses</span>
+                </motion.li>
+              </motion.ul>
             </motion.div>
 
             <motion.div 
               className="space-y-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={listContainerVariant}
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-xl md:text-2xl font-bold mb-4">This isn't for you if:</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
+              <h3 className="heading-md mb-4">This isn't for you if:</h3>
+              <motion.ul className="space-y-4" variants={listContainerVariant}>
+                <motion.li 
+                  className="flex items-start space-x-3"
+                  variants={listItemVariant}
+                >
                   <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy text-base md:text-lg">You don't have product-market fit</span>
-                </li>
-                <li className="flex items-start space-x-3">
+                  <span className="text-navy">You don't have product-market fit</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-start space-x-3"
+                  variants={listItemVariant}
+                >
                   <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy text-base md:text-lg">You expect a magic fix for a broken offer</span>
-                </li>
-                <li className="flex items-start space-x-3">
+                  <span className="text-navy">You expect a magic fix for a broken offer</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-start space-x-3"
+                  variants={listItemVariant}
+                >
                   <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy text-base md:text-lg">You want a junior SDR, not a strategic closer</span>
-                </li>
-              </ul>
+                  <span className="text-navy">You want a junior SDR, not a strategic closer</span>
+                </motion.li>
+              </motion.ul>
             </motion.div>
           </div>
 
@@ -277,16 +322,11 @@ const HomePage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <a 
-              href="https://calendly.com/zachm98/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
+            <Link to="/contact" className="btn btn-primary">
               See if We're a Good Fit
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
