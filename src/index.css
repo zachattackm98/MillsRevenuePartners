@@ -17,24 +17,25 @@
   html {
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-white text-navy overflow-x-hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
   }
-
-  body {
-    @apply bg-white text-navy;
-  }
 }
 
 @layer components {
   .container {
-    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+    @apply w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-base font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 whitespace-nowrap;
   }
 
   .btn-primary {
@@ -42,22 +43,22 @@
   }
 
   .section {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-24;
   }
 
   .heading-xl {
-    @apply text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
   }
 
   .heading-lg {
-    @apply text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
   }
 
   .heading-md {
-    @apply text-xl font-semibold tracking-tight sm:text-2xl;
+    @apply text-lg sm:text-xl md:text-2xl font-semibold tracking-tight;
   }
 
   .subheading {
-    @apply mt-4 text-lg text-slate sm:text-xl;
+    @apply mt-4 text-base sm:text-lg md:text-xl text-slate;
   }
 }
