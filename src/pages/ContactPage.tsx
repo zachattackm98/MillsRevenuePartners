@@ -65,6 +65,16 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-slate max-w-2xl mx-auto">
               If you've got qualified leads and a proven offer, we're ready to drive revenue.
             </p>
+            <div>
+              <a 
+                href="https://calendly.com/zachm98/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary text-lg px-8 py-4"
+              >
+                Book Your Call Now
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -112,7 +122,12 @@ const ContactPage: React.FC = () => {
                     <Calendar className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Schedule a Call</h3>
-                      <a href="#" className="text-slate hover:text-gold transition-colors">
+                      <a 
+                        href="https://calendly.com/zachm98/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate hover:text-gold transition-colors"
+                      >
                         Book a 30-minute consultation
                       </a>
                     </div>
@@ -338,7 +353,12 @@ const ContactPage: React.FC = () => {
               Schedule your strategy call today and let's discuss your high-ticket sales needs.
             </p>
             <div>
-              <a href="#" className="btn btn-primary text-lg px-8 py-4">
+              <a 
+                href="https://calendly.com/zachm98/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary text-lg px-8 py-4"
+              >
                 Book Your Call Now
               </a>
             </div>
