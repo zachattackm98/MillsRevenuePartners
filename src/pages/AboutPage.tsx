@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Seth Mills</h3>
               <p className="text-gold font-medium mb-3">Head of Sales Operations</p>
               <p className="text-slate mb-4">
-                10+ years optimizing B2B sales processes and managing enterprise client relationships.
+                2+ years optimizing B2B sales processes and managing enterprise client relationships.
               </p>
               <div className="flex items-center text-slate">
                 <Briefcase className="w-4 h-4 mr-2" />
