@@ -20,8 +20,9 @@ export default {
         '128': '32rem',
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'fade-in': 'fadeIn 0.3s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+        'fade-up': 'fadeUp 0.5s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -32,6 +33,13 @@ export default {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        fadeUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      screens: {
+        'xs': '375px',
       },
     },
   },
