@@ -202,7 +202,7 @@ const AboutPage: React.FC = () => {
                   In partnership with General Electric, Zach designed and executed a national PPE program to outfit 1,500+ technicians with OSHA-compliant PPE, collaborating directly with GE's procurement and safety leadership. The program was built from the ground up to ensure worker protection and operational compliance at scale.
                 </p>
                 <p>
-                  Zach delivered a featured presentation on Electrical Safety at the 2024 Operational Maintenance & Safety (OMS) show to an audience of 150+ engineers, safety managers, and executives as part of an American Clean Power (ACP) national initiative. Following the presentation, he was engaged by RES Energy — the world's largest renewable energy firm — to supplyvelectrical safety products for their field operations.
+                  Zach delivered a featured presentation on Electrical Safety at the 2024 Operational Maintenance & Safety (OMS) show to an audience of 150+ engineers, safety managers, and executives as part of an American Clean Power (ACP) national initiative. Following the presentation, RES Energy — the world’s largest renewable energy company — approached him directly, and now relies on his team to supply electrical PPE across their field operations.
                 </p>
                 <p>
                   Zach combines deep product knowledge, operational insight, and top-tier sales execution to help growing companies close faster, sell smarter, and drive results without building bloated sales teams. Through Mills Revenue, he offers startups, agencies, and technical firms a direct path to revenue growth — backed by real-world field experience and a proven track record of performance.
