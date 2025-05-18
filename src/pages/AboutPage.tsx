@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Briefcase, GraduationCap, Award } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
@@ -25,6 +25,148 @@ const AboutPage: React.FC = () => {
               A boutique sales firm focused exclusively on closing high-ticket B2B deals for elite clients.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Bio Section */}
+      <section className="py-12 md:py-24 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative max-w-md mx-auto lg:max-w-none"
+            >
+              <div className="aspect-w-4 aspect-h-5 bg-light-gray rounded-lg overflow-hidden">
+                <div className="w-full h-full bg-navy/10 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-navy mx-auto flex items-center justify-center">
+                      <span className="text-xl md:text-2xl text-gold font-bold">ZM</span>
+                    </div>
+                    <p className="mt-4 text-navy font-semibold">Zach Mills</p>
+                    <p className="text-slate text-sm">Founder & CEO</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-32 md:w-48 h-32 md:h-48 bg-gold/10 rounded-lg -z-10"></div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-4 md:space-y-6"
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Zach Mills</h2>
+              <div className="space-y-3 md:space-y-4 text-slate text-base md:text-lg">
+                <p>
+                  Zach Mills is a seasoned B2B sales expert with over 8 years of experience closing high-ticket deals in industrial, safety, and compliance sectors.
+                </p>
+                <p>
+                  He's built multi-million dollar accounts, led nationwide training initiatives, and managed vendor/distributor relationships across North America.
+                </p>
+                <p>
+                  Now, he brings that enterprise-level expertise to startups, SaaS firms, and agencies that want revenue without building a bloated sales team.
+                </p>
+              </div>
+              <div className="pt-4">
+                <a 
+                  href="https://calendly.com/zachm98/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Work With Zach
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-12 md:py-24 bg-off-white">
+        <div className="container px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Our Team</h2>
+            <p className="text-lg text-slate">
+              Meet the experts behind our successful high-ticket closing operations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white p-6 rounded-lg shadow-sm"
+            >
+              <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+                <span className="text-lg font-semibold text-navy">SM</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Seth Mills</h3>
+              <p className="text-gold font-medium mb-3">Head of Sales Operations</p>
+              <p className="text-slate mb-4">
+                10+ years optimizing B2B sales processes and managing enterprise client relationships.
+              </p>
+              <div className="flex items-center text-slate">
+                <Briefcase className="w-4 h-4 mr-2" />
+                <span className="text-sm">Sales Operations</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-6 rounded-lg shadow-sm"
+            >
+              <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+                <span className="text-lg font-semibold text-navy">ZM</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Zach Mills</h3>
+              <p className="text-gold font-medium mb-3">CEO & Senior Sales Strategist</p>
+              <p className="text-slate mb-4">
+                Expert in B2B sales with a proven track record of closing multi-million dollar deals across various industries.
+              </p>
+              <div className="flex items-center text-slate">
+                <Award className="w-4 h-4 mr-2" />
+                <span className="text-sm">Strategic Leadership</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-6 rounded-lg shadow-sm"
+            >
+              <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+                <span className="text-lg font-semibold text-navy">CH</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Calle Hopkins</h3>
+              <p className="text-gold font-medium mb-3">Client Success Manager</p>
+              <p className="text-slate mb-4">
+                Specialized in client onboarding and ensuring smooth sales transitions for enterprise accounts.
+              </p>
+              <div className="flex items-center text-slate">
+                <GraduationCap className="w-4 h-4 mr-2" />
+                <span className="text-sm">Client Relations</span>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
