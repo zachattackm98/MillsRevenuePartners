@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               />
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-navy text-center lg:text-left leading-tight">
-                High-Ticket Closing for Founders Who Want Results, Not Maybes.
+                High-Ticket Remote Closing for Founders Who Want Results, Not Maybes.
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl text-slate text-center lg:text-left">
                 Elite-level remote closing. Commission-only. Revenue guaranteed or you don't pay.
