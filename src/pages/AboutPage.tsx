@@ -244,14 +244,12 @@ const AboutPage: React.FC = () => {
               Let's discuss how our high-ticket closing expertise can drive revenue for your business.
             </p>
             <div>
-              <a 
-                href="https://calendly.com/zachm98/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/contact"
                 className="btn btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4"
               >
                 Schedule Your Strategy Call
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
