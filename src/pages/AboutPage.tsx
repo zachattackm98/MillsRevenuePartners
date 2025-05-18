@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Briefcase, GraduationCap, Award } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Briefcase, GraduationCap, Award, Building2, Target, Users } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Hero Section */}
+      {/* About Mills Revenue Section */}
       <section className="py-12 md:py-32 bg-gradient-to-b from-off-white to-white">
         <div className="container px-4 md:px-6">
           <motion.div
@@ -22,66 +22,57 @@ const AboutPage: React.FC = () => {
           >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-navy">About Mills Revenue Partners</h1>
             <p className="text-lg md:text-xl text-slate max-w-2xl mx-auto">
-              A boutique sales firm focused exclusively on closing high-ticket B2B deals for elite clients.
+              Transforming B2B sales through strategic expertise and commission-based partnerships.
             </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Bio Section */}
-      <section className="py-12 md:py-24 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative max-w-md mx-auto lg:max-w-none"
+              className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <div className="aspect-w-4 aspect-h-5 bg-light-gray rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-navy/10 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-navy mx-auto flex items-center justify-center">
-                      <span className="text-xl md:text-2xl text-gold font-bold">ZM</span>
-                    </div>
-                    <p className="mt-4 text-navy font-semibold">Zach Mills</p>
-                    <p className="text-slate text-sm">Founder & CEO</p>
-                  </div>
-                </div>
+              <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mb-6">
+                <Building2 className="w-6 h-6 text-gold" />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-32 md:w-48 h-32 md:h-48 bg-gold/10 rounded-lg -z-10"></div>
+              <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
+              <p className="text-slate">
+                To deliver exceptional revenue growth for B2B companies through elite-level sales expertise and results-driven partnerships.
+              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-4 md:space-y-6"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Zach Mills</h2>
-              <div className="space-y-3 md:space-y-4 text-slate text-base md:text-lg">
-                <p>
-                  Zach Mills is a seasoned B2B sales expert with over 8 years of experience closing high-ticket deals in industrial, safety, and compliance sectors.
-                </p>
-                <p>
-                  He's built multi-million dollar accounts, led nationwide training initiatives, and managed vendor/distributor relationships across North America.
-                </p>
-                <p>
-                  Now, he brings that enterprise-level expertise to startups, SaaS firms, and agencies that want revenue without building a bloated sales team.
-                </p>
+              <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mb-6">
+                <Target className="w-6 h-6 text-gold" />
               </div>
-              <div className="pt-4">
-                <a 
-                  href="https://calendly.com/zachm98/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  Work With Zach
-                </a>
+              <h3 className="text-xl font-semibold mb-3">Our Focus</h3>
+              <p className="text-slate">
+                Specializing in high-ticket B2B sales for SaaS, agencies, and consultants who demand results, not maybes.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-8 rounded-lg shadow-sm"
+            >
+              <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-gold" />
               </div>
+              <h3 className="text-xl font-semibold mb-3">Our Approach</h3>
+              <p className="text-slate">
+                Commission-only partnerships that align our success with yours, ensuring focused and results-driven sales execution.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -164,6 +155,65 @@ const AboutPage: React.FC = () => {
               <div className="flex items-center text-slate">
                 <GraduationCap className="w-4 h-4 mr-2" />
                 <span className="text-sm">Client Relations</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bio Section */}
+      <section className="py-12 md:py-24 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative max-w-md mx-auto lg:max-w-none"
+            >
+              <div className="aspect-w-4 aspect-h-5 bg-light-gray rounded-lg overflow-hidden">
+                <div className="w-full h-full bg-navy/10 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-navy mx-auto flex items-center justify-center">
+                      <span className="text-xl md:text-2xl text-gold font-bold">ZM</span>
+                    </div>
+                    <p className="mt-4 text-navy font-semibold">Zach Mills</p>
+                    <p className="text-slate text-sm">Founder & CEO</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-32 md:w-48 h-32 md:h-48 bg-gold/10 rounded-lg -z-10"></div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-4 md:space-y-6"
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Zach Mills</h2>
+              <div className="space-y-3 md:space-y-4 text-slate text-base md:text-lg">
+                <p>
+                  Zach Mills is a seasoned B2B sales expert with over 8 years of experience closing high-ticket deals in industrial, safety, and compliance sectors.
+                </p>
+                <p>
+                  He's built multi-million dollar accounts, led nationwide training initiatives, and managed vendor/distributor relationships across North America.
+                </p>
+                <p>
+                  Now, he brings that enterprise-level expertise to startups, SaaS firms, and agencies that want revenue without building a bloated sales team.
+                </p>
+              </div>
+              <div className="pt-4">
+                <a 
+                  href="https://calendly.com/zachm98/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Work With Zach
+                </a>
               </div>
             </motion.div>
           </div>
