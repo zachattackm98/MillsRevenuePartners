@@ -196,7 +196,7 @@ const AboutPage: React.FC = () => {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Zach Mills</h2>
               <div className="space-y-4 md:space-y-6 text-slate text-base md:text-lg">
                 <p>
-                  Zach Mills is a revenue strategist and enterprise-level closer With over eight years of experience in B2B sales, Zach Mills sold over $3 million in electrical safety equipment in a single calendar year to top-tier solar companies like Tesla, Sunrun, SolarCity, Titan Solar, and Freedom Solar — managing the full sales cycle from outreach to fulfillment in one of the most competitive and compliance-driven markets in the U.S.
+                  Zach Mills is a revenue strategist and enterprise-level closer. With over eight years of experience in B2B sales, Zach Mills sold over $3 million in electrical safety equipment in a single calendar year to top-tier solar companies like Tesla, Sunrun, SolarCity, Titan Solar, and Freedom Solar — managing the full sales cycle from outreach to fulfillment in one of the most competitive and compliance-driven markets in the U.S.
                 </p>
                 <p>
                   In partnership with General Electric, Zach designed and executed a national PPE program to outfit 1,500+ technicians with OSHA-compliant PPE, collaborating directly with GE's procurement and safety leadership. The program was built from the ground up to ensure worker protection and operational compliance at scale.
