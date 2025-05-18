@@ -133,16 +133,16 @@ const AboutPage: React.FC = () => {
               className="bg-white p-6 rounded-lg shadow-sm"
             >
               <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
-                <span className="text-lg font-semibold text-navy">DR</span>
+                <span className="text-lg font-semibold text-navy">ZM</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">David Rodriguez</h3>
-              <p className="text-gold font-medium mb-3">Senior Sales Strategist</p>
+              <h3 className="text-xl font-semibold mb-2">Zach Mills</h3>
+              <p className="text-gold font-medium mb-3">CEO & Senior Sales Strategist</p>
               <p className="text-slate mb-4">
-                Expert in SaaS and technology sales with a proven track record of closing 6-figure deals.
+                Expert in B2B sales with a proven track record of closing multi-million dollar deals across various industries.
               </p>
               <div className="flex items-center text-slate">
                 <Award className="w-4 h-4 mr-2" />
-                <span className="text-sm">Strategic Planning</span>
+                <span className="text-sm">Strategic Leadership</span>
               </div>
             </motion.div>
 
@@ -154,7 +154,7 @@ const AboutPage: React.FC = () => {
               className="bg-white p-6 rounded-lg shadow-sm"
             >
               <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
-                <span className="text-lg font-semibold text-navy">AK</span>
+                <span className="text-lg font-semibold text-navy">CH</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Calle Hopkins</h3>
               <p className="text-gold font-medium mb-3">Client Success Manager</p>
