@@ -185,7 +185,7 @@ const HomePage: React.FC = () => {
           >
             <h2 className="heading-lg">What We Do</h2>
             <p className="subheading">
-              We help B2B founders, SaaS companies, and consultants close high-ticket deals ($5K–$50K+) 
+              We help B2B founders, SaaS companies, and consultants close high-ticket deals ($5K+) 
               without the overhead of hiring an in-house sales team.
             </p>
           </motion.div>
