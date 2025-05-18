@@ -194,26 +194,27 @@ const AboutPage: React.FC = () => {
               className="space-y-4 md:space-y-6"
             >
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Zach Mills</h2>
-              <div className="space-y-3 md:space-y-4 text-slate text-base md:text-lg">
+              <div className="space-y-4 md:space-y-6 text-slate text-base md:text-lg">
                 <p>
-                  Zach Mills is a seasoned B2B sales expert with over 8 years of experience closing high-ticket deals in industrial, safety, and compliance sectors.
+                  Zach Mills is a revenue strategist and enterprise-level closer with over eight years of experience in high-ticket, compliance-heavy sales environments. He has driven over $3 million in sales of electrical safety equipment to some of the nation's top solar companies — including Tesla, Sunrun, SolarCity, Titan Solar, Freedom Solar, and others — by managing the full sales lifecycle from initial outreach through fulfillment and support.
                 </p>
                 <p>
-                  He's built multi-million dollar accounts, led nationwide training initiatives, and managed vendor/distributor relationships across North America.
+                  In partnership with General Electric, Zach designed and executed a national PPE program to outfit 1,500+ technicians with OSHA-compliant gear, collaborating directly with GE's procurement and safety leadership. The program was built from the ground up to ensure worker protection and operational compliance at scale.
                 </p>
                 <p>
-                  Now, he brings that enterprise-level expertise to startups, SaaS firms, and agencies that want revenue without building a bloated sales team.
+                  In 2024, Zach delivered a featured presentation on Arc Flash Awareness and Operational Maintenance & Safety (OMS) to an audience of 150+ engineers, safety managers, and executives as part of an American Clean Power (ACP) national initiative. Following the presentation, he was engaged by RES Energy — the world's largest renewable energy firm — to supply PPE and electrical safety products for their field operations.
+                </p>
+                <p>
+                  Zach combines deep product knowledge, operational insight, and top-tier sales execution to help growing companies close faster, sell smarter, and drive results without building bloated sales teams. Through Mills Revenue, he offers startups, agencies, and technical firms a direct path to revenue growth — backed by real-world field experience and a proven track record of performance.
                 </p>
               </div>
               <div className="pt-4">
-                <a 
-                  href="https://calendly.com/zachm98/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/contact"
                   className="btn btn-primary"
                 >
                   Work With Zach
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
