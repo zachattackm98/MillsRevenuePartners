@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Briefcase, GraduationCap, Award } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
@@ -81,6 +81,89 @@ const AboutPage: React.FC = () => {
                 >
                   Work With Zach
                 </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-12 md:py-24 bg-off-white">
+        <div className="container px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Our Team</h2>
+            <p className="text-lg text-slate">
+              Meet the experts behind our successful high-ticket closing operations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white p-6 rounded-lg shadow-sm"
+            >
+              <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+                <span className="text-lg font-semibold text-navy">SM</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Sarah Mitchell</h3>
+              <p className="text-gold font-medium mb-3">Head of Sales Operations</p>
+              <p className="text-slate mb-4">
+                10+ years optimizing B2B sales processes and managing enterprise client relationships.
+              </p>
+              <div className="flex items-center text-slate">
+                <Briefcase className="w-4 h-4 mr-2" />
+                <span className="text-sm">Sales Operations</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-6 rounded-lg shadow-sm"
+            >
+              <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+                <span className="text-lg font-semibold text-navy">DR</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">David Rodriguez</h3>
+              <p className="text-gold font-medium mb-3">Senior Sales Strategist</p>
+              <p className="text-slate mb-4">
+                Expert in SaaS and technology sales with a proven track record of closing 6-figure deals.
+              </p>
+              <div className="flex items-center text-slate">
+                <Award className="w-4 h-4 mr-2" />
+                <span className="text-sm">Strategic Planning</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-6 rounded-lg shadow-sm"
+            >
+              <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
+                <span className="text-lg font-semibold text-navy">AK</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Alex Kumar</h3>
+              <p className="text-gold font-medium mb-3">Client Success Manager</p>
+              <p className="text-slate mb-4">
+                Specialized in client onboarding and ensuring smooth sales transitions for enterprise accounts.
+              </p>
+              <div className="flex items-center text-slate">
+                <GraduationCap className="w-4 h-4 mr-2" />
+                <span className="text-sm">Client Relations</span>
               </div>
             </motion.div>
           </div>
