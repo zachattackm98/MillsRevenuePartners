@@ -114,7 +114,7 @@ const AboutPage: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
                 <span className="text-lg font-semibold text-navy">SM</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Sarah Mitchell</h3>
+              <h3 className="text-xl font-semibold mb-2">Calle Hopkins</h3>
               <p className="text-gold font-medium mb-3">Head of Sales Operations</p>
               <p className="text-slate mb-4">
                 10+ years optimizing B2B sales processes and managing enterprise client relationships.
