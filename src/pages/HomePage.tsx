@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle2, XCircle, ArrowRight, Target, DollarSign, PieChart } from 'lucide-react';
 
 // Animation variants
 const staggerContainer = {
@@ -201,7 +201,9 @@ const HomePage: React.FC = () => {
               className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
             >
-              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
+              <div className="flex items-center justify-center h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300">
+                <Target className="w-6 h-6 text-gold" />
+              </div>
               <h3 className="heading-md mb-4">Strategic Sales Expertise</h3>
               <p className="text-slate">
                 Enterprise-level sales strategies tailored to your high-ticket offering, focused on value and ROI.
@@ -212,7 +214,9 @@ const HomePage: React.FC = () => {
               className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
             >
-              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
+              <div className="flex items-center justify-center h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300">
+                <DollarSign className="w-6 h-6 text-gold" />
+              </div>
               <h3 className="heading-md mb-4">Commission-Only Model</h3>
               <p className="text-slate">
                 Pay only for results. No retainers or base fees means we're aligned with your success.
@@ -223,7 +227,9 @@ const HomePage: React.FC = () => {
               className="group bg-off-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
               variants={cardVariant}
             >
-              <div className="h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300" />
+              <div className="flex items-center justify-center h-12 w-12 bg-gold/20 rounded-lg mb-6 group-hover:bg-gold/30 transition-colors duration-300">
+                <PieChart className="w-6 h-6 text-gold" />
+              </div>
               <h3 className="heading-md mb-4">Lead-to-Revenue Pipeline</h3>
               <p className="text-slate">
                 We handle the entire sales process from qualifying leads to negotiating deals and closing contracts.
