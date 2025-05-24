@@ -72,3 +72,7 @@ const ContactPage: React.FC = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity
+      }
+      }
+  )
+}
