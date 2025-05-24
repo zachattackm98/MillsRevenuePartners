@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
       }
 
       const { error: submitError, data } = await supabase
-        .from('contact_submissions')
+        .from('form_submissions')
         .insert([{
           name: formData.name.trim(),
           email: formData.email.trim().toLowerCase(),
