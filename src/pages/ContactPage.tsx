@@ -45,18 +45,16 @@ const ContactPage: React.FC = () => {
         throw new Error('Please enter a valid email address');
       }
 
-      const { error: submitError, data } = await supabase
+      const { error: submitError } = await supabase
         .from('form_submissions')
-        .insert([{
+        .insert({
           name: formData.name.trim(),
           email: formData.email.trim().toLowerCase(),
           company: formData.company.trim(),
           message: formData.message.trim()
-        }])
-        .select();
+        });
 
       if (submitError) {
-        console.error('Supabase error:', submitError);
         throw new Error(submitError.message || 'Failed to submit form. Please try again.');
       }
 
