@@ -34,18 +34,35 @@ const ContactPage: React.FC = () => {
     setError('');
 
     try {
+      // Validate form data
+      if (!formData.name || !formData.email || !formData.company || !formData.message) {
+        throw new Error('Please fill in all fields');
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        throw new Error('Please enter a valid email address');
+      }
+
       const { error: submitError } = await supabase
         .from('contact_submissions')
-        .insert([formData]);
+        .insert([{
+          name: formData.name.trim(),
+          email: formData.email.trim().toLowerCase(),
+          company: formData.company.trim(),
+          message: formData.message.trim()
+        }]);
 
       if (submitError) {
-        throw new Error(submitError.message);
+        console.error('Supabase error:', submitError);
+        throw new Error('Failed to submit form. Please try again.');
       }
 
       setIsSubmitted(true);
       setFormData(initialFormData);
     } catch (err) {
-      setError('There was a problem submitting your form. Please try again.');
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.');
       console.error('Form submission error:', err);
     } finally {
       setIsSubmitting(false);
